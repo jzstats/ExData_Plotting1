@@ -113,7 +113,7 @@ project_data <- read.table(
 # STEP 3: Creates a data frame with the data needed to construct 'plot3.png'
 ################################################################################
 
-# Creates a new variable for datetime in POSIXct format as,
+# Creates a new variable for datetime in POSIXct format as 'datetime',
 # based on 'Date' and 'Time' variables from 'project_data'
 datetime <- strptime(
       x = paste(project_data[[1]], project_data[[2]]),
