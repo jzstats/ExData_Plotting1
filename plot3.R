@@ -143,9 +143,11 @@ png(filename = "plot3.png", width = 480, height = 480)
 with(target_data, {
       
       # creates axis and labels but doesn't plot anything in it
-      plot(x = Datetime, y =  Sub_metering_1,
-           xlab = "", ylab = "Energy sub metering",
-           type = "n")
+      plot(x = Datetime, y =  Sub_metering_1, 
+           type = "n", # to avoid plotting any points
+                       # but will use the values to specify 
+                       # the x-axis and y-axis limits
+           xlab = "", ylab = "Energy sub metering")
       
       # plots the lines for the target variables over the datetime
       points(x = Datetime, y = Sub_metering_1, type = "l", col = "black")
