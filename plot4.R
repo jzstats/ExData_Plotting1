@@ -11,7 +11,7 @@
 #                          'Sub_metering_1', 'Sub_metering_2' and 'Sub_metering_3'
 #                          over datetime
 #                       4. a plot of 'Global_reactive_power' over datetime
-#               with data provided from the file "household_power_consumption.txt",
+#               Data was provided from the file "household_power_consumption.txt",
 #               from the "Individual household electric power consumption Data Set",
 #               that can be downloaded from 'UC Irvine Machine Learning Repository',
 #               through this link:
@@ -119,7 +119,7 @@ project_data <- read.table(
 # STEP 3: Creates a data frame with the data needed to construct 'plot4.png'
 ################################################################################
 
-# Creates a new variable for datetime in POSIXct format as,
+# Creates a new variable for datetime in POSIXct format as 'datetime',
 # based on 'Date' and 'Time' variables from 'project_data'
 datetime <- strptime(
       x = paste(project_data[[1]], project_data[[2]]),
@@ -131,7 +131,7 @@ target_data <- data.frame(
       "Datetime" = datetime,
       "Global_active_power" = project_data[[3]],
       "Global_reactive_power" = project_data[[4]],
-      "Voltage" = project_data[[5]],
+      "Voltage" = project_data[[5]],               
       "Sub_metering_1" = project_data[[7]],
       "Sub_metering_2" = project_data[[8]],
       "Sub_metering_3" = project_data[[9]]
