@@ -124,9 +124,9 @@ datetime <- strptime(
 # Creates a data frame only with the required variables for 'plot3.png'
 target_data <- data.frame(
       "Datetime" = datetime,
-      "Sub_metering_1" = project_data[[7]], # Sub_metering_1
-      "Sub_metering_2" = project_data[[8]], # Sub_metering_2
-      "Sub_metering_3" = project_data[[9]]  # Sub_metering_3
+      "Sub_metering_1" = project_data[[7]], 
+      "Sub_metering_2" = project_data[[8]],
+      "Sub_metering_3" = project_data[[9]]  
 )
 
 
