@@ -169,9 +169,11 @@ with(target_data, {
       
       # construct the third plot on bottom-left
       ## creates axis and labels but doesn't plot anything in it
-      plot(x = Datetime, y =  Sub_metering_1,
-           xlab = "", ylab = "Energy sub metering",
-           type = "n")
+      plot(x = Datetime, y =  Sub_metering_1, 
+           type = "n", # to avoid plotting any points
+                       # but will use the values to specify 
+                       # the x-axis and y-axis limits
+      xlab = "", ylab = "Energy sub metering")
       
       # plots the lines for the target variables over the datetime
       points(x = Datetime, y = Sub_metering_1, type = "l", col = "black")
@@ -183,6 +185,7 @@ with(target_data, {
              legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
              col = c("black", "red", "blue"),
              lty = 1,
+             # the legend in this box has no border line around it
              bty = "n")
       
       # constructs the fourth plot on bottom-right
