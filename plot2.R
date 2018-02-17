@@ -123,7 +123,7 @@ datetime <- strptime(
 # Creates a data frame only with the variables needed to construct Plot 2
 target_data <- data.frame(
       "Datetime" = datetime,
-      "Global_active_power" = project_data[[3]] # Global_active_power
+      "Global_active_power" = project_data[[3]] 
 )
 
 
